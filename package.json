@@ -2,7 +2,6 @@
   "name": "petbarlo",
   "version": "1.0.0",
   "description": "petBarlo, a food ordering app by Sindhu ",
-  
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -28,8 +27,11 @@
   "devDependencies": {
     "parcel": "^2.9.3"
   },
-
-  "browsersList":[
+  "browsersList": [
     "last 2 versions"
-  ]
+  ],
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
