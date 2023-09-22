@@ -2,8 +2,10 @@
   "name": "petbarlo",
   "version": "1.0.0",
   "description": "petBarlo, a food ordering app by Sindhu ",
-  "main": "App.js",
+  
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -25,5 +27,9 @@
   "homepage": "https://github.com/Sindhuk96/petBarlo#readme",
   "devDependencies": {
     "parcel": "^2.9.3"
-  }
+  },
+
+  "browsersList":[
+    "last 2 versions"
+  ]
 }
