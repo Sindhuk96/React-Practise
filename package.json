@@ -1,0 +1,29 @@
+{
+  "name": "petbarlo",
+  "version": "1.0.0",
+  "description": "petBarlo, a food ordering app by Sindhu ",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sindhuk96/petBarlo.git"
+  },
+  "keywords": [
+    "petBarlo",
+    "Foodorder",
+    "Food",
+    "ordering",
+    "app"
+  ],
+  "author": "sindhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sindhuk96/petBarlo/issues"
+  },
+  "homepage": "https://github.com/Sindhuk96/petBarlo#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
