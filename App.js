@@ -45,14 +45,15 @@ const styleCard ={
     backgroundColor:"#F0F0F0"
 };
 
-const RestaurantCard=()=>{
+//passing dynamic data without destructuring
+const RestaurantCard=(props)=>{
   return (
     <div className="rest-card" style={styleCard}>
         <img className="rest-logo" alt="rest-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c49f74c4c8c4098a384c511817d7ebdf" />
-        <h3>Meghana Foods</h3>
-        <h4>Biryanis</h4>
-        <h4>4.4 stars</h4>
-        <h4>30 mins</h4>
+        <h3>{props.resName}</h3>
+        <h4>{props.cuisines}</h4>
+        <h4>{props.stars}</h4>
+        <h4>{props.ETA}</h4>
     </div>
   );  
 };
@@ -63,12 +64,8 @@ const Body=()=>{
         <div className="body">
             <div className="search">search</div>
             <div className="rest-list">
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
-                <RestaurantCard/>
+                <RestaurantCard resName="Santosh Dhaba" cuisines="Biryanis,rotis" stars="4.4" ETA="30 mins"/>
+                <RestaurantCard resName="Kesariya" cuisines="chat" stars="4.4" ETA="30 mins"/>                
             </div>
         </div>
     );
