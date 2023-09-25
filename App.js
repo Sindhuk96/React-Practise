@@ -47,13 +47,14 @@ const styleCard ={
 
 //passing dynamic data without destructuring
 const RestaurantCard=(props)=>{
+    const {resName, cuisines, stars, ETA}=props;
   return (
     <div className="rest-card" style={styleCard}>
         <img className="rest-logo" alt="rest-logo" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/c49f74c4c8c4098a384c511817d7ebdf" />
-        <h3>{props.resName}</h3>
-        <h4>{props.cuisines}</h4>
-        <h4>{props.stars}</h4>
-        <h4>{props.ETA}</h4>
+        <h3>{resName}</h3>
+        <h4>{cuisines}</h4>
+        <h4>{stars}</h4>
+        <h4>{ETA}</h4>
     </div>
   );  
 };
