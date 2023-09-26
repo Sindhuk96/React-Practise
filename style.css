@@ -6,18 +6,20 @@
 
 .Logo{
     height: 100%;
-    width:130px;
+    width:140px;
     padding-left:20px;
-    padding-top:0px;
-    
+    margin-bottom: 15px;
+    margin-top:0px;
+    padding-top:0px;;
     }
 
 .Header{
     display:flex;
     justify-content: space-between;
-    height:13vh;
+    height:20vh;
     border:0px solid black;
     background-color: aliceblue;
+  
        
 }
 
@@ -39,9 +41,12 @@
 
 .rest-card{
     width:200px;
-    height:300px;
-    margin:15px;
+    height:370px;
+    margin:20px;
     border-radius: 10%;
+    word-wrap:break-word;
+    box-shadow: 0px 5px 8px gray;
+    padding:10px;
 }
 
 .search{
@@ -63,6 +68,7 @@
     display:flex;
     flex-wrap: wrap;
 }
+
 
 
 
