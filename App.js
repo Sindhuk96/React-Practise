@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 /* 
     - Header
@@ -42,7 +42,7 @@ const Header = ()=>{
 };
 
 const styleCard ={
-    backgroundColor:"#F0F0F0"
+    backgroundColor:"aliceblue"
 };
 
 const resList=[
@@ -1165,7 +1165,7 @@ const Body=()=>{
             <div className="rest-list">
                 {
                     resList.map((restaurant)=>(
-                        <RestaurantCard resData={restaurant}/>
+                        <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
                     ))                   
                 }
             </div>
