@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState , useEffect } from "react";
 import resList from "../utils/mockdata";
 import { RES_API_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 const Body=()=>{
 
@@ -18,8 +19,9 @@ const Body=()=>{
         setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    }
 
-    return (
-        <div className="body">
+    return listOfRestaurants.length === 0?
+        (<Shimmer />):                             
+        (<div className="body">
             <div className="filter">
                 <button className="filter-button" 
                 onClick={()=>{
