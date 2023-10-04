@@ -9,7 +9,7 @@ const RestaurantCard=(props)=>{
         <img className="rest-logo" alt="rest-logo" src={ CDN_URL+ cloudinaryImageId} />
         <h4>{name}</h4>
         <h5>{avgRating}</h5>
-        <br></br>
+        <span></span>
         <div>{cuisines.join(",")}</div>
         <div>{costForTwo}</div>
     </div>

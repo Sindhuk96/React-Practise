@@ -1,10 +1,22 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import resList from "../utils/mockdata";
+import { RES_API_URL } from "../utils/constants";
 
 const Body=()=>{
 
-   let [listOfRestaurants,setlistOfRestaurants]=useState(resList);    
+   let [listOfRestaurants,setlistOfRestaurants]=useState([]); 
+   
+   useEffect(()=>{
+        fetchData();
+   },[]);
+
+   const fetchData=async ()=>{
+        const data=await fetch(RES_API_URL);
+        console.log(data);
+        const json= await data.json();    
+        setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+   }
 
     return (
         <div className="body">
@@ -22,7 +34,7 @@ const Body=()=>{
             <div className="rest-list">
                 {
                     listOfRestaurants.map((restaurant)=>(
-                        <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+                        <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>
                     ))                   
                 }
             </div>
