@@ -41,9 +41,7 @@ const Body=()=>{
                 onClick={()=>{
 
                         const filteredRestaurants=listOfRestaurants.filter((res)=>res.info.avgRating>4)
-                        setlistOfRestaurants(filteredRestaurants);
-                        console.log(listOfRestaurants);
-                        console.log(filteredRestaurants);
+                        setFilteredRestaurants(filteredRestaurants);
                         }}>
                     Top Rated Restaurants</button>
             </div>

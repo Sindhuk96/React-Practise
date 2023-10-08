@@ -51,9 +51,6 @@
     text-overflow:ellipsis;    
 }
 
-.search{
-    padding:20px;
-}
 
 .rest-logo{    
     width: 95%;
@@ -71,9 +68,15 @@
     flex-wrap: wrap;
 }
 
+.filter{
+    display:flex;
+    
+}
+
 .filter-button{
     margin: 10px;
     cursor: pointer;
+    height:20px;
 }
 
 .Shimmer-Container{
@@ -91,6 +94,16 @@
     background-color: aliceblue; 
 }
 
+.login-btn{
+    width: 80px;
+    Height:40px;
+}
+
+
+
+.search-box{
+    margin-right: 0px;
+}
 
 
 
