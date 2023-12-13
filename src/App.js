@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header.js";
 import Body from "./components/Body.js";
 
-const AppLayout=()=>{
+const AppLayout= () => {
 
     return (
         <div className="App">

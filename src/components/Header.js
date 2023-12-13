@@ -1,4 +1,5 @@
 import {useState} from "react";
+import { LOGO_URL } from "../utils/constants";
 
 const Header = ()=>{
 
@@ -7,7 +8,7 @@ const Header = ()=>{
     return (
         <div className="Header">
             <div className="Logo-container">
-                <img className="Logo" alt="App-Logo" src="http://127.0.0.1:8080/src/utils/assets/petBarlo_Logo.png"/>
+                <img className="Logo" alt="App-Logo" src={LOGO_URL} />
             </div>
             <div className="NavLinks">
                     <ul >
