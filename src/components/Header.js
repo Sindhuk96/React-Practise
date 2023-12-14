@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { LOGO_URL } from "../utils/constants";
+import { LOGO_URL,LOGO_URL2 } from "../utils/constants";
 
 const Header = ()=>{
 
@@ -8,7 +8,7 @@ const Header = ()=>{
     return (
         <div className="Header">
             <div className="Logo-container">
-                <img className="Logo" alt="App-Logo" src={LOGO_URL} />
+                <img className="Logo" src={LOGO_URL2} alt="App-Logo"/>
             </div>
             <div className="NavLinks">
                     <ul >
