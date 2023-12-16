@@ -4,21 +4,24 @@
     box-sizing:border-box;
 }
 
+
+
 .Logo{
     height: 100%;
     width:160px;
     padding-left:20px;
     margin-bottom: 15px;
     margin-top:0px;
-    padding-top:0px;;
+    padding-top:0px;
+    margin-left:0px;
+    padding-left: 0px;
     }
 
 .Header{
     display:flex;
     justify-content: space-between;
-    height:20vh;
-    border:0px solid black;
-    background-color: aliceblue;       
+    height:16vh;
+    border:0px solid black;          
 }
 
 .NavLinks > ul {

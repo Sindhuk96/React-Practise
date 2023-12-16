@@ -1,5 +1,6 @@
 import {useState} from "react";
 import { LOGO_URL,LOGO_URL2 } from "../utils/constants";
+import logo from "../utils/assets/petBarloLogo.png"
 
 const Header = ()=>{
 
@@ -8,7 +9,7 @@ const Header = ()=>{
     return (
         <div className="Header">
             <div className="Logo-container">
-                <img className="Logo" src={LOGO_URL2} alt="App-Logo"/>
+                <img className="Logo" src={logo} alt="App-Logo"/>
             </div>
             <div className="NavLinks">
                     <ul >
@@ -26,3 +27,5 @@ const Header = ()=>{
 };
 
 export default Header;
+
+
