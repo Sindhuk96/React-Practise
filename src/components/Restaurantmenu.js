@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 const Restaurantmenu = () => {
 
     const [itemsMenu,setItemsMenu]=useState(null);    
+    
     const {resId}=useParams();
 
     useEffect(()=>{

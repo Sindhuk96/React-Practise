@@ -23,7 +23,8 @@ const Body=()=>{
         setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    }
 
-    return listOfRestaurants.length === 0?
+   console.log(listOfRestaurants);
+    return listOfRestaurants?.length === 0?
         (<Shimmer />):                             
         (<div className="body">
             <div className="filter">
