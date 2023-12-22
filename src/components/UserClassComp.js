@@ -19,11 +19,11 @@ class UserClassComp extends React.Component{
 
         console.log(this.props.name+"render is called");   
 
-        const {name,location,contact} =this.props;
+        const {name,location,contact,photo} =this.props;
         const {count}=this.state;        
 
         return (<div className="User-Card">
-                    <h2>{name}</h2>
+                    <h2>{name}</h2>                    
                     <h3>{location}</h3>
                     <h4>{contact}</h4>
                     <h4>Count:{count}</h4>
@@ -32,6 +32,7 @@ class UserClassComp extends React.Component{
                             count:this.state.count+1
                         })
                     }}> click Here </button>
+                    <img src={photo}/>
                 </div>);
     };
 }; 
