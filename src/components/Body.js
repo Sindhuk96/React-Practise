@@ -4,12 +4,14 @@ import resList from "../utils/mockdata";
 import { RES_API_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlinestatus from "../utils/useOnlinestatus";
 
 const Body=()=>{
 
    let [listOfRestaurants,setlistOfRestaurants]=useState([]); 
    let [filteredRestaurants,setFilteredRestaurants]=useState([]); 
    let [searchText,setSearchText]=useState("");  
+   const onlineStatus=useOnlinestatus();
    
    useEffect(()=>{
         fetchData();
@@ -23,7 +25,8 @@ const Body=()=>{
         setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    }
 
-   console.log(listOfRestaurants);
+   if(onlineStatus === false) return <h1>Seems like you are offline!! please check your internet connection</h1>
+   
     return listOfRestaurants?.length === 0?
         (<Shimmer />):                             
         (<div className="body">
