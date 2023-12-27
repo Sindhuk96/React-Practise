@@ -15,9 +15,10 @@ const Header = ()=>{
                 <img className="Logo" src={logo} alt="App-Logo"/>
             </div>
             <div className="NavLinks">
-                    <ul >
+                    <ul>
                         <li>Online status:{onlineStatus?"Online":"Offline"}</li>
                         <li><Link to="/">Home</Link></li>
+                        <li><Link to="/groceries">Groceries</Link></li>
                         <li><Link to="/about">About</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         <li><Link to="/account">Account</Link></li>

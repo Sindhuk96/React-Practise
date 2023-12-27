@@ -21,8 +21,8 @@ const Body=()=>{
         const data=await fetch(RES_API_URL);
         console.log(data);
         const json= await data.json();    
-        setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    }
 
    if(onlineStatus === false) return <h1>Seems like you are offline!! please check your internet connection</h1>
