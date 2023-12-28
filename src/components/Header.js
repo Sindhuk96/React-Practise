@@ -10,20 +10,19 @@ const Header = ()=>{
     const onlineStatus=useOnlinestatus();
 
     return (
-        <div className="Header">
+        <div className=" Header flex justify-between m-2 bg-blue-100 shadow-sm">
             <div className="Logo-container">
-                <img className="Logo" src={logo} alt="App-Logo"/>
+                <img className="Logo w-40 h-[6rem]" src={logo} alt="App-Logo"/>
             </div>
-            <div className="NavLinks">
-                    <ul>
-                        <li>Online status:{onlineStatus?"Online":"Offline"}</li>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/groceries">Groceries</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/account">Account</Link></li>
-                        <li><Link to="/cart">Cart</Link></li>
-                        <button className="login-btn"
+            <div className="NavLinks flex">
+                    <ul className="flex items-center">
+                        <li className="m-2">Online status: {onlineStatus?<span className="text-green-600">Online</span>:<span className="text-red-600">Offline</span>}</li>
+                        <li className="m-2"><Link to="/">Home</Link></li>
+                        <li className="m-2"><Link to="/groceries">Groceries</Link></li>
+                        <li className="m-2"><Link to="/about">About</Link></li>
+                        <li className="m-2"><Link to="/contact">Contact</Link></li>                        
+                        <li className="m-2"><Link to="/cart">Cart</Link></li>
+                        <button className="login-btn ml-2 mr-10"
                             onClick={()=>{loginBtn === "login"?setLoginBtn("logout"):setLoginBtn("login")}}
                         >{loginBtn}</button>               
                     </ul>
