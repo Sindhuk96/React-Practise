@@ -1,9 +1,12 @@
 import { CDN_URL } from "../utils/constants";
+import {useContext} from "react";
+import UserContext from "../utils/UserContext";
 
 //passing dynamic data without destructuring
 const RestaurantCard=(props)=>{
     const {resData}=props;
     const {name,cuisines,cloudinaryImageId,costForTwo,avgRating}=resData?.info;
+    const {loggedinuser}=useContext(UserContext);
   return (
     <div className="rest-card m-4 p-4 w-44 h-80 bg-blue-50 rounded-md overflow-hidden shadow-md hover">
         <img className="rest-logo w-full h-3/6 rounded-sm" alt="rest-logo" src={ CDN_URL+ cloudinaryImageId} />
@@ -11,6 +14,7 @@ const RestaurantCard=(props)=>{
         <h6>Rating: {avgRating}</h6>
         <div className="w-5/6">{cuisines.join(",")}</div>
         <h6>{costForTwo}</h6>
+        <h6>{loggedinuser}</h6>
     </div>
   );  
 };

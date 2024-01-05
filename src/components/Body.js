@@ -22,9 +22,10 @@ const Body=()=>{
    const fetchData=async ()=>{
         const data=await fetch(RES_API_URL);
         console.log(data);
-        const json= await data.json();    
-        setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setFilteredRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        const json= await data.json();  
+        console.log(json);
+        setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    }
 
    if(onlineStatus === false) return <div className="w-screen h-screen flex justify-center items-center"><h1 className="text-red-600 font-semibold text-4xl">Seems like you are offline!!<br/><br/>please check your internet connection...</h1></div>

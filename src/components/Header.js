@@ -1,13 +1,16 @@
-import {useState} from "react";
+import {useContext, useState} from "react";
 import { LOGO_URL,LOGO_URL2 } from "../utils/constants";
 import logo from "../utils/assets/petBarloLogo.png"
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlinestatus";
+import UserContext from "../utils/UserContext";
 
 const Header = ()=>{
 
     let [loginBtn,setLoginBtn]=useState("login");
     const onlineStatus=useOnlinestatus();
+    const {loggedinuser}=useContext(UserContext);
+    console.log(loggedinuser);
 
     return (
         <div className=" Header flex justify-between m-2 bg-blue-100 shadow-sm">
@@ -22,12 +25,13 @@ const Header = ()=>{
                         <li className="m-2"><Link to="/about">About</Link></li>
                         <li className="m-2"><Link to="/contact">Contact</Link></li>                        
                         <li className="m-2"><Link to="/cart">Cart</Link></li>
-                        <button className="login-btn ml-2 mr-10"
+                        <button className="login-btn m-2"
                             onClick={()=>{loginBtn === "login"?setLoginBtn("logout"):setLoginBtn("login")}}
-                        >{loginBtn}</button>               
+                        >{loginBtn}</button>
+                        <li className="login-btn ml-2 mr-10">{loggedinuser}</li>               
                     </ul>
             </div>
-        </div>
+        </div> 
     );
 };
 
