@@ -9,6 +9,8 @@ import Restaurantmenu from "./components/Restaurantmenu.js";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Error from "./components/Error.js";
 import UserContext from "./utils/UserContext.js";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore.js";
 //import Groceries from "./components/Groceries.js";
 
 const About=lazy(()=>import("./components/About.js"));
@@ -20,12 +22,14 @@ const AppLayout= () => {
     const [userName,setUserName]=useState("sindhu");
     return (
     
-        <UserContext.Provider value={{loggedinuser:userName}}>
+        <Provider store={appStore}>
+        <UserContext.Provider value={{loggedinuser:userName,setUserName}}>
             <div className="App">
                 <Header/>
                 <Outlet/>
             </div>
         </UserContext.Provider>
+        </Provider>
     );
 };
 

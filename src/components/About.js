@@ -23,6 +23,7 @@ class About extends Component{
         this.setState(
             {
                 userInfo:json
+                
             }
         )
     } 
@@ -44,8 +45,12 @@ class About extends Component{
             <div className="container">
                 <h1>About Page</h1>
                 <UserContext.Consumer>
-                        {({loggedinuser})=>
-                            <h5>{loggedinuser}</h5>                        
+                        {({loggedinuser,setUserName})=>(                            
+                            <div>                                
+                                <h5>{setUserName(name)}</h5>
+                                <h5>{loggedinuser}</h5> 
+                            </div>
+                            )                     
                         }
                 </UserContext.Consumer>               
                 <UserClassComp name={name} location="Hyderabad" contact="9638527412" photo={avatar_url}/>  
