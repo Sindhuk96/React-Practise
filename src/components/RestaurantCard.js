@@ -5,6 +5,7 @@ import UserContext from "../utils/UserContext";
 //passing dynamic data without destructuring
 const RestaurantCard=(props)=>{
     const {resData}=props;
+    console.log(resData?.info);
     const {name,cuisines,cloudinaryImageId,costForTwo,avgRating}=resData?.info;
     const {loggedinuser}=useContext(UserContext);
   return (
